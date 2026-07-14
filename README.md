@@ -5,13 +5,16 @@ API REST em Java com Spring Boot, Spring Web, Spring Data JPA, Hibernate, Bean V
 ## Requisitos
 
 - Java 21+
-- Maven 3.9+
+
+O projeto inclui o Maven Wrapper, portanto nao e necessario instalar o Maven globalmente.
 
 ## Como executar
 
 ```bash
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
+
+No Windows, use `mvnw.cmd spring-boot:run`.
 
 Base URL:
 
@@ -34,8 +37,16 @@ http://localhost:8080/api/h2-console
 ## PostgreSQL
 
 ```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=postgres
+./mvnw spring-boot:run -Dspring-boot.run.profiles=postgres
 ```
+
+## Build e testes
+
+```bash
+./mvnw clean verify
+```
+
+No Windows, use `mvnw.cmd clean verify`.
 
 Variaveis suportadas:
 
